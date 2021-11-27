@@ -1,25 +1,36 @@
 # Pokedux ![Status badge](https://img.shields.io/badge/status-in%20progress-yellow)
 
-✨ Encuentra tus pokemones favoritos y descubre todas sus habilidades para convertirte en el mejor Maestro Pokemón usando REDUX.
+✨ Pokedux developed using React-Redux.
 
-## 🚀 Instalación
+## Redux - State Management
 
-1. Clona este proyecto.
-2. Ve a la carpeta del proyecto
-   `cd pokedux`
-3. Instala las dependencias
+Redux is a predictable State Container for JavaScript Apps.
+
+## Redux vs Context API
+
+|                | Redux                                   | Context API             |
+| :------------: | --------------------------------------- | ----------------------- |
+|    Debugger    | Easier to track changes through actions | Actions are not defined |
+|  Bundle size   | Will increase the bundle size           | Embebed in React        |
+|  Middlewares   | Very easy to create custom middlewares  | -                       |
+| Learning curve | Medium                                  | Low                     |
+|   Rendering    | Prevent unnecessary render              | -                       |
+
+## 🚀 How to run
+
+1. Install dependencies
    `yarn`
-4. Corre el ambiente local
+2. Run development environment
    `yarn start`
 
-## 🛠 Despliegue
+## 🛠 Deployment
 
-1. Una vez instsaladas las dependencias, puedes hacer el build
+1. Run build command
    `yarn build`
 
-## 🦀 Base de Datos Pokemon
+## 🦀 API
 
-Todos los datos vienen de [PokeApi](https://pokeapi.co/)
+All the data come from [PokeApi](https://pokeapi.co/)
 
 ## 🧾 License
 
