@@ -16,6 +16,16 @@ Redux is a predictable State Container for JavaScript Apps.
 | Learning curve | Medium                                  | Low                     |
 |   Rendering    | Prevent unnecessary render              | -                       |
 
+## useSelector vs Connect
+
+|                        | useSelector                            | Connect API                                                  |
+| :--------------------: | -------------------------------------- | ------------------------------------------------------------ |
+|      Bolierplate       | Less Boilerplates                      | More boilerplates (elements, wrappers, connect)              |
+| Split responsabilities | -                                      | High Order Component is created and pass state through props |
+|        Testing         | We must ensure that Redux is connected | We only pass props and test it                               |
+
+Redux recommends to use Hooks API.
+
 ## 🚀 How to run
 
 1. Install dependencies
