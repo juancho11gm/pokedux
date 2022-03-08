@@ -26,6 +26,10 @@ Redux is a predictable State Container for JavaScript Apps.
 
 Redux recommends to use Hooks API.
 
+## Redux Thunk
+
+Thunk middleware for Redux. It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
+
 ## 🚀 How to run
 
 1. Install dependencies

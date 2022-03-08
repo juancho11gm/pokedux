@@ -2,8 +2,7 @@ import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import PokemonList from '../../components/PokemonList';
 import Searcher from '../../components/Searcher';
-import { getPokemons } from '../../api/getPokemons';
-import { setPokemon } from '../../actions';
+import { getPokemonWithDetails } from '../../actions';
 import './styles.css';
 
 function Home() {
@@ -11,12 +10,7 @@ function Home() {
 	const list = useSelector((state) => state.list);
 
 	useEffect(() => {
-		const fetchPokemons = async () => {
-			const response = await getPokemons();
-			dispatch(setPokemon(response.results));
-		};
-
-		fetchPokemons();
+		dispatch(getPokemonWithDetails());
 	}, [dispatch]);
 
 	return (
