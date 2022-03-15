@@ -26,6 +26,37 @@ Redux is a predictable State Container for JavaScript Apps.
 
 Redux recommends to use Hooks API.
 
+## Immutability
+
+```js
+const userInfo = {
+	name: 'Juan',
+	age: 22,
+};
+
+// Mutable
+
+const updateAge = (user) => {
+	user.age = user.age + 1;
+	return user;
+};
+
+// Immutable: Object.assing
+
+const updateAge = (user) => {
+	return Object.assign({}, user, { age: user.age + 1 });
+};
+
+// Immutable: Spread Operator
+
+const updateAge = (user) => {
+	return {
+		...user,
+		age: user.age + 1,
+	};
+};
+```
+
 ## Redux Thunk
 
 Thunk middleware for Redux. It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.

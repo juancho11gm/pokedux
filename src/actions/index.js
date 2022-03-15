@@ -17,21 +17,33 @@ export const clearError = (payload) => ({
 	payload,
 });
 
+export const toggleLoader = (payload) => ({
+	type: ACTION_TYPES.TOGGLE_LOADER,
+});
+
+export const setFavorite = (payload) => ({
+	type: ACTION_TYPES.SET_FAVORITE,
+	payload,
+});
+
 export const getPokemonWithDetails = () => (dispatch) => {
 	const fetchPokemons = async () => {
 		try {
+			dispatch(toggleLoader());
 			const pokemonList = await getPokemons();
 			const pokemonReponse = await Promise.all(
 				pokemonList.results.map((pokemon) => axios.get(pokemon.url))
 			);
 			const pokemonData = pokemonReponse.map((response) => response.data);
 			dispatch(setPokemons(pokemonData));
+			dispatch(toggleLoader());
 		} catch (error) {
 			dispatch(
 				setError({
 					message: 'Error',
 				})
 			);
+			dispatch(toggleLoader());
 		}
 	};
 
