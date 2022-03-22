@@ -55,6 +55,21 @@ const updateAge = (user) => {
 		age: user.age + 1,
 	};
 };
+
+// Immutable: immutable (It will be an extra package that will increase the app load and the bundle)
+import { fromJS } from 'immutable';
+
+const initialState = fromJS({
+	list: [],
+	loading: false,
+});
+
+export const reducerObject = (state = initialState, action) => {
+	switch (action.type) {
+		case ACTION_TYPES.SET_POKEMON:
+			return state.set('list', fromJS(action.payload));
+	}
+};
 ```
 
 ## Redux Thunk

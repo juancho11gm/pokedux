@@ -8,8 +8,8 @@ import './styles.css';
 
 function Home() {
 	const dispatch = useDispatch();
-	const list = useSelector((state) => state.list);
-	const loading = useSelector((state) => state.loading);
+	const list = useSelector((state) => state.get('list')).toJS();
+	const loading = useSelector((state) => state.get('loading'));
 
 	useEffect(() => {
 		dispatch(getPokemonWithDetails());
