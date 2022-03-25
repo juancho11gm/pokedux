@@ -6,7 +6,7 @@ import './styles.css';
 
 export default function SearchBar() {
 	const dispatch = useDispatch();
-	const filter = useSelector((state) => state.get('pokemon').get('filter'));
+	const filter = useSelector((state) => state.pokemon.filter);
 
 	return (
 		<div className='Searcher wrapper'>

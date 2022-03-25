@@ -1,4 +1,4 @@
-import { combineReducers } from 'redux-immutable';
+import { combineReducers } from 'redux';
 import { pokemonReducer } from './pokemonReducer';
 import { uiReducer } from './uiReducer';
 
