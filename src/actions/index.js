@@ -17,12 +17,17 @@ export const clearError = (payload) => ({
 	payload,
 });
 
-export const toggleLoader = (payload) => ({
+export const toggleLoader = () => ({
 	type: ACTION_TYPES.TOGGLE_LOADER,
 });
 
 export const setFavorite = (payload) => ({
 	type: ACTION_TYPES.SET_FAVORITE,
+	payload,
+});
+
+export const setFilter = (payload) => ({
+	type: ACTION_TYPES.SET_FILTER,
 	payload,
 });
 

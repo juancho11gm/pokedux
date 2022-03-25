@@ -7,7 +7,14 @@ import { getPokemonWithDetails } from '../../actions';
 import './styles.css';
 
 function Home() {
-	const list = useSelector((state) => state.getIn(['pokemon', 'list']).toJS());
+	const pokemons = useSelector((state) =>
+		state.get('pokemon').get('pokemons').toJS()
+	);
+	const filter = useSelector((state) => state.get('pokemon').get('filter'));
+
+	const filteredPokemons = filter
+		? pokemons.filter((pokemon) => pokemon.name.toLowerCase().includes(filter))
+		: pokemons;
 	const loading = useSelector((state) => state.get('ui').get('loading'));
 	const dispatch = useDispatch();
 
@@ -19,7 +26,7 @@ function Home() {
 		<div className='Home'>
 			{loading && <Loader />}
 			<Searcher />
-			<PokemonList pokemons={list} />
+			<PokemonList pokemons={filteredPokemons} />
 		</div>
 	);
 }
