@@ -26,11 +26,6 @@ export const setFavorite = (payload) => ({
 	payload,
 });
 
-export const setFilter = (payload) => ({
-	type: ACTION_TYPES.SET_FILTER,
-	payload,
-});
-
 export const getPokemonWithDetails = () => (dispatch) => {
 	const fetchPokemons = async () => {
 		try {
@@ -43,6 +38,7 @@ export const getPokemonWithDetails = () => (dispatch) => {
 			).then((pokemonResponses) => {
 				return pokemonResponses.map((response) => response.data);
 			});
+
 			dispatch(setPokemons(pokemonData));
 			dispatch(toggleLoader());
 		} catch (error) {

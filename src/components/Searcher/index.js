@@ -1,11 +1,11 @@
 import React from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
+import { useSearchParams } from 'react-router-dom';
 import { Grid, Search } from 'semantic-ui-react';
-import { setFilter } from '../../actions';
 import './styles.css';
 
 export default function SearchBar() {
-	const dispatch = useDispatch();
+	let [, setSearchParams] = useSearchParams();
 	const filter = useSelector((state) => state.pokemon.filter);
 
 	return (
@@ -24,7 +24,12 @@ export default function SearchBar() {
 						placeholder='Encuentra a tu Pokemón favorito'
 						value={filter}
 						onSearchChange={(e, data) => {
-							dispatch(setFilter(data.value));
+							const filter = data.value;
+							if (filter) {
+								setSearchParams({ filter });
+							} else {
+								setSearchParams({});
+							}
 						}}
 					/>
 				</Grid.Column>

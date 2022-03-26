@@ -2,7 +2,6 @@ import { ACTION_TYPES } from '../actions/type';
 
 const initialState = {
 	pokemons: [],
-	filter: '',
 };
 
 export const pokemonReducer = (state = initialState, action) => {
@@ -21,12 +20,6 @@ export const pokemonReducer = (state = initialState, action) => {
 					}
 					return pokemon;
 				}),
-			};
-
-		case ACTION_TYPES.SET_FILTER:
-			return {
-				...state,
-				filter: action.payload,
 			};
 
 		default:
