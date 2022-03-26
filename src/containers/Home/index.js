@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import PokemonList from '../../components/PokemonList';
 import Searcher from '../../components/Searcher';
 import Loader from '../../components/Loader';
+import Layout from '../../components/Layout';
 import { getPokemonWithDetails } from '../../actions';
 import './styles.css';
 
@@ -17,15 +18,19 @@ function Home() {
 	const dispatch = useDispatch();
 
 	useEffect(() => {
-		dispatch(getPokemonWithDetails());
-	}, [dispatch]);
+		if (pokemons.length === 0) {
+			dispatch(getPokemonWithDetails());
+		}
+	}, [dispatch, pokemons]);
 
 	return (
-		<div className='Home'>
-			{loading && <Loader />}
-			<Searcher />
-			<PokemonList pokemons={filteredPokemons} />
-		</div>
+		<Layout>
+			<div className='Home'>
+				{loading && <Loader />}
+				<Searcher />
+				<PokemonList pokemons={filteredPokemons} />
+			</div>
+		</Layout>
 	);
 }
 

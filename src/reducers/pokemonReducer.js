@@ -19,7 +19,6 @@ export const pokemonReducer = (state = initialState, action) => {
 					if (pokemon.id === action.payload) {
 						pokemon.favorite = !pokemon.favorite;
 					}
-
 					return pokemon;
 				}),
 			};
