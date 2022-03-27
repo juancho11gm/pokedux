@@ -1,6 +1,13 @@
 # Pokedux ![Status badge](https://img.shields.io/badge/status-in%20progress-yellow)
 
-✨ Pokedux developed using React-Redux.
+✨ Pokedux developed using React-Redux and React Router.
+
+## 🚀 How to run
+
+1. Install dependencies
+   `yarn`
+2. Run development environment
+   `yarn start`
 
 ## Redux - State Management
 
@@ -75,13 +82,6 @@ export const reducerObject = (state = initialState, action) => {
 ## Redux Thunk
 
 Thunk middleware for Redux. It allows writing functions with logic inside that can interact with a Redux store's dispatch and getState methods.
-
-## 🚀 How to run
-
-1. Install dependencies
-   `yarn`
-2. Run development environment
-   `yarn start`
 
 ## 🛠 Deployment
 

@@ -9,4 +9,6 @@ export const getPokemon = (id) =>
 	axiosInstance
 		.get(`/pokemon/${id}`)
 		.then((response) => response.data)
-		.catch((error) => console.error(error));
+		.catch((error) => {
+			throw error;
+		});

@@ -19,6 +19,7 @@ const store = createStore(rootReducer, composedEnhancers);
 const App = () => {
 	return (
 		<Provider store={store}>
+			{/* Connect the URL */}
 			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<Home />} />

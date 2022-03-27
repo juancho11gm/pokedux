@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { Image, Label, Divider, Grid, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
+import { Image, Label, Divider, Grid, Icon } from 'semantic-ui-react';
 import { setFavorite } from '../../actions';
 import { DEFAULT_COLOR, FAV_COLOR, MAIN_COLOR } from '../../utils/constants';
 import './styles.css';
@@ -41,9 +42,7 @@ const PokemonCard = ({ pokemon }) => {
 							</Label>
 						))}
 					</div>
-					<Button as='a' primary href={`/pokemons/${pokemon.id}`}>
-						Check out more
-					</Button>
+					<Link to={`/pokemons/${pokemon.id}`}>Details</Link>
 				</div>
 			</div>
 		</Grid.Column>
