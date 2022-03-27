@@ -5,6 +5,13 @@ import { Grid, Search } from 'semantic-ui-react';
 import './styles.css';
 
 export default function SearchBar() {
+	/* 
+		7. Search Params
+
+		It works a lot like React.useState() but stores and sets the state in the URL search params instead of in memory.
+	
+		setSearchParams() is putting the ?filter=... search params in the URL and rerendering the router.
+	*/
 	let [, setSearchParams] = useSearchParams();
 	const filter = useSelector((state) => state.pokemon.filter);
 

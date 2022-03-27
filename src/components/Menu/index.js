@@ -14,6 +14,13 @@ const Menu = () => {
 					</NavLink>
 				</SemanticMenu.Item>
 				<SemanticMenu.Item link position='right'>
+					{/* 
+						6. Active Links
+
+						We swapped out Link for NavLink.
+						We changed the style from a simple object to a function that returns an object.
+						We changed the color of our link by looking at the isActive value that NavLink passed to our styling function.
+					*/}
 					<NavLink
 						to='/favorites'
 						className={({ isActive }) => (isActive ? 'blueviolet' : 'grey')}

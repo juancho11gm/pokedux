@@ -9,6 +9,11 @@ import Loader from '../../components/Loader';
 import { getPokemonWithDetails } from '../../actions';
 
 function Pokemons() {
+	/* 
+		7. Search Params
+	
+		useSearchParams is now returning a URLSearchParams with "filter" as one of its values.
+	*/
 	let [searchParams] = useSearchParams();
 
 	const pokemons = useSelector((state) => state.pokemon.pokemons);

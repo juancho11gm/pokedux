@@ -1,6 +1,6 @@
 # Pokedux ![Status badge](https://img.shields.io/badge/status-in%20progress-yellow)
 
-✨ Pokedux developed using React-Redux and React Router.
+✨ Pokedux developed using React-Redux and [React Router](https://reactrouter.com/docs/en/v6/getting-started/tutorial).
 
 ## 🚀 How to run
 

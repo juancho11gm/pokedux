@@ -7,6 +7,10 @@ import { MAIN_COLOR } from '../../utils/constants';
 import './styles.css';
 
 const Pokemon = () => {
+	/* 
+		5. Read URL Params 
+		URL params are always string
+	*/
 	let params = useParams();
 	const [pokemon, setPokemon] = useState(null);
 	const [error, setError] = useState('');

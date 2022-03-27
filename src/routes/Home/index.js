@@ -11,6 +11,12 @@ function Home() {
 					paddingBottom: '1rem',
 				}}
 			>
+				{/* 
+						4. Using Links
+
+						- <Link /> will enable global navigation
+						- Link is changing the URL without causing a full page reload.
+					*/}
 				<Link to='/pokemons'>Pokemons</Link> |{' '}
 				<Link to='/favorites'>Favorite Pokemons</Link>
 			</nav>
