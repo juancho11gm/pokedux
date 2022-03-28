@@ -1,7 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
-import { Outlet } from 'react-router';
 import PokemonList from '../../components/PokemonList';
 import Layout from '../../components/Layout';
 import Searcher from '../../components/Searcher';
@@ -38,7 +37,6 @@ function Pokemons() {
 				<Searcher />
 				<PokemonList pokemons={filteredPokemons} />
 			</div>
-			<Outlet />
 		</Layout>
 	);
 }

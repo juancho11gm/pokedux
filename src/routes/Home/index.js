@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 import './styles.css';
 
 function Home() {
@@ -20,6 +20,7 @@ function Home() {
 				<Link to='/pokemons'>Pokemons</Link> |{' '}
 				<Link to='/favorites'>Favorite Pokemons</Link>
 			</nav>
+			<Outlet />
 		</div>
 	);
 }

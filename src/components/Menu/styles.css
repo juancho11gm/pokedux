@@ -8,4 +8,5 @@
 
 .blueviolet {
 	color: blueviolet;
+	border-bottom: 1px solid blueviolet;
 }

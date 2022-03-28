@@ -28,7 +28,17 @@ const App = () => {
 					2. Use Routes
 				*/}
 				<Routes>
-					<Route path='/' element={<Home />} />
+					<Route path='/' element={<Home />}>
+						{/* 
+							2. Nested Routes
+						*/}
+						<Route
+							path='about'
+							element={
+								<p>React Project created using React Router and redux.</p>
+							}
+						/>
+					</Route>
 					<Route path='/pokemons' element={<Pokemons />} />
 					{/* 
 						5. Read URL Params
